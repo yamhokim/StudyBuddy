@@ -1,0 +1,3 @@
+venv/
+studybud/__pycache__/
+db.sqlite3
