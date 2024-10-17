@@ -5,6 +5,11 @@ from .forms import RoomForm
 
 # Create your views here.
 
+def loginPage(request):
+
+    context= {}
+    return render(request, 'base/login_register.html', context=context)
+
 def home(request):
     query = request.GET.get('query') if request.GET.get('query') != None else ''
     rooms = Room.objects.all().filter(Q(topic__name__icontains=query) |
