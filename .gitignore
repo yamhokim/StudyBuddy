@@ -1,3 +1,5 @@
 venv/
 studybud/__pycache__/
 db.sqlite3
+link.txt
+superuser_info.txt
