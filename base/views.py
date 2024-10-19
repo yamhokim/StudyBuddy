@@ -20,7 +20,7 @@ def loginPage(request):
 
     if request.method == 'POST':
         # Obtain the username and password of the user trying to login
-        username = request.POST.get('username')
+        username = request.POST.get('username').lower()
         password = request.POST.get('password')
 
         # Check if the user exists
@@ -48,6 +48,22 @@ def logoutUser(request):
 
 def registerPage(request):
     form = UserCreationForm()
+
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            # Generate a model of the data, without saving it
+            user = form.save(commit=False)
+            # Clean up the username data
+            user.username = user.username.lower()
+            # Save the actual user, the log them in, and redirect them to the home page
+            user.save()
+            login(request, user)
+            return redirect('home')
+        else:
+            messages.error(request, 'An error occured during registration')
+            
+
     context = {'form': form}
     return render(request, 'base/login_register.html', context)
 
