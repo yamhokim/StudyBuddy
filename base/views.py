@@ -98,6 +98,10 @@ def room(request, pk):
     context = {'room': room, 'room_messages': room_messages, 'participants': participants}
     return render(request, 'base/room.html', context)
 
+def userProfile(request):
+    context = {}
+    return render(request, 'base/profile.html', context)
+
 @login_required(login_url="login")
 def createRoom(request):
     form = RoomForm()
