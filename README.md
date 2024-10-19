@@ -33,34 +33,28 @@ A real-time chat application built with Django, designed to function similarly t
     git clone https://github.com/your-username/django-chat-platform.git
     ```
 
-2. Navigate to the project directory:
-
-    ```bash
-    cd django-chat-platform
-    ```
-
-3. Install the required Python packages:
+2. Install the required Python packages:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-4. Apply database migrations:
+3. Apply database migrations:
 
     ```bash
     python manage.py migrate
     ```
 
-5. Start the Redis server:
+4. Start the Redis server:
 
     ```bash
     redis-server
     ```
 
-6. Start the development server:
+5. Start the development server:
 
     ```bash
     python manage.py runserver
     ```
 
-7. Open your browser and visit `http://127.0.0.1:8000/` to access the chat platform.
+6. Open your browser and visit `http://127.0.0.1:8000/` to access the chat platform.
