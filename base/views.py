@@ -185,3 +185,8 @@ def updateUser(request):
 
     context = {"form": form}
     return render(request, 'base/update-user.html', context)
+
+def topicsPage(request):
+    topics = Topic.objects.filter()
+    context = {'topics': topics}
+    return render(request, 'base/topics.html', context)
