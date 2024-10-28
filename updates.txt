@@ -1,0 +1,2 @@
+- add some sort of status tracker (active, offline, away, etc.)
+- make it so that if a user deletes all their messages from a room, they are no longer a participant
