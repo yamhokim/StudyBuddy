@@ -1,4 +1,4 @@
-# Django Chat Platform
+# Study Buddy
 
 A real-time chat application built with Django, designed to function similarly to Discord, allowing users to communicate through chat rooms in real-time.
 
